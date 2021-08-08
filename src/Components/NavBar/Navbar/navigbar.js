@@ -33,7 +33,7 @@ const Navigbar = (props) => {
                         <NavLink  > <Link to ='about'><MdEmail /> <a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Contact Us</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink  > <Link to ='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > About</a></Link></NavLink>
+                        <NavLink  > <Link to ='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > About </a></Link></NavLink>
                     </NavItem>
                     <NavItem >
                         <NavLink ><GiReceiveMoney/><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
