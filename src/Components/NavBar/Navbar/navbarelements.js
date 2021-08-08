@@ -79,7 +79,7 @@ export const MainFooter = styled.div`
    background-color: #000;
    color: white;
    text-align: center;
-   height:100px;
+   height:100%;
 `
 export const Wrapper = styled.div`
 margin-top:200px;
