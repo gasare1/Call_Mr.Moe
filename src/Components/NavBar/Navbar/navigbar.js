@@ -6,7 +6,7 @@ import {
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsHouseDoorFill, BsFillQuestionCircleFill } from 'react-icons/bs'
-import { GiHouse,GiReceiveMoney } from 'react-icons/gi'
+import { GiHouse, GiReceiveMoney } from 'react-icons/gi'
 import { MdEmail } from 'react-icons/md'
 import { CgMenuLeft } from 'react-icons/cg'
 import { RiMenuFoldLine } from 'react-icons/ri'
@@ -27,18 +27,19 @@ const Navigbar = (props) => {
             <Collapse isOpen={isOpen} navbar>
                 <Nav  >
                     <NavItem >
-                        <NavLink  > <Link to ='home'><GiHouse /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Home</a></Link></NavLink>
+                        <NavLink  > <Link to='home'><GiHouse /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Home</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink  > <Link to ='about'><MdEmail /> <a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Contact Us</a></Link></NavLink>
+                        <NavLink  > <Link to='about'><MdEmail /> <a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Contact Us</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink  > <Link to ='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > About </a></Link></NavLink>
+                        <NavLink  > <Link to='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > About </a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink ><GiReceiveMoney/><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
+                        <NavLink ><GiReceiveMoney /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
                     </NavItem>
-                   
+                    
+
                     <Wrapper isOpen={isOpen} >
                         <Content isOpen={isOpen}>
                             <Menu>
@@ -46,7 +47,7 @@ const Navigbar = (props) => {
                                     < RiMenuFoldLine   > {isOpen ? "menu_open" : "menu"}</ RiMenuFoldLine >
                                 </BurgerIcon>
                                 <MenuButton  ><Link to='home' style={{ textDecoration: 'none', color: '#45424d' }} ><GiHouse /> Home</Link></MenuButton>
-                                <MenuButton ><Link to='contact'  style={{ textDecoration: 'none', color: '#45424d' }}> <MdEmail /> Contact Us</Link></MenuButton>
+                                <MenuButton ><Link to='contact' style={{ textDecoration: 'none', color: '#45424d' }}> <MdEmail /> Contact Us</Link></MenuButton>
                                 <MenuButton  ><Link to='about' spy={true} style={{ textDecoration: 'none', color: '#45424d' }}><BsFillQuestionCircleFill />About</Link></MenuButton>
                             </Menu>
                         </Content>

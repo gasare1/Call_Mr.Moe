@@ -10,6 +10,7 @@ import {BiUser} from 'react-icons/bi'
 import {HiOutlineMail} from 'react-icons/hi'
 import{SiMinutemailer} from 'react-icons/si'
 import './contact.css'
+
 const Contact = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -58,6 +59,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            
             <div className="card-body">
                 <h5 className="card-title">Special title treatment</h5>
                 <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>

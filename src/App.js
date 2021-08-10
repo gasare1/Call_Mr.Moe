@@ -6,6 +6,7 @@ import Footer from './Components/NavBar/Navbar/Footer';
 import Contact from './Components/ContactUS/Contact';
 import About from './Components/About/About';
 import ScrollToTop from './Components/NavBar/Navbar/ScrollToTop';
+import HomeSearch from './Components/ContactUS/homeSearch';
 function App() {
   return (
     <>
@@ -13,9 +14,11 @@ function App() {
         <ScrollToTop />
         <Navigbar />
         <HomePage path="/" component={HomePage} exact />
+        <HomeSearch />
         <Contact path="/contact" component={Contact} />
-        <About path="/about" component={About} />
 
+        <About path="/about" component={About} />
+        
         <Footer />
       </Router>
 
