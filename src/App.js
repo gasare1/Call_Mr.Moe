@@ -14,7 +14,7 @@ function App() {
         <ScrollToTop />
         <Navigbar />
         <HomePage path="/" component={HomePage} exact />
-        <HomeSearch />
+        <HomeSearch path="/homesearch" component={HomeSearch} />
         <Contact path="/contact" component={Contact} />
 
         <About path="/about" component={About} />

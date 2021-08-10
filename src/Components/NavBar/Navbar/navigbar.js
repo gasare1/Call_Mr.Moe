@@ -5,7 +5,7 @@ import {
 } from './navbarelements'
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BsHouseDoorFill, BsFillQuestionCircleFill } from 'react-icons/bs'
+import { BsHouseDoorFill, BsFillQuestionCircleFill,BsSearch} from 'react-icons/bs'
 import { GiHouse, GiReceiveMoney } from 'react-icons/gi'
 import { MdEmail } from 'react-icons/md'
 import { CgMenuLeft } from 'react-icons/cg'
@@ -34,6 +34,9 @@ const Navigbar = (props) => {
                     </NavItem>
                     <NavItem >
                         <NavLink  > <Link to='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > About </a></Link></NavLink>
+                    </NavItem>
+                    <NavItem >
+                        <NavLink  > <Link to='homesearch'><BsSearch/><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Search</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
                         <NavLink ><GiReceiveMoney /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
