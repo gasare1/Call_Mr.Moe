@@ -13,7 +13,7 @@ import { CgMenuLeft } from 'react-icons/cg'
 import { RiMenuFoldLine } from 'react-icons/ri'
 import { Link } from 'react-scroll'
 import { Form, Button, Modal } from "react-bootstrap";
-import TwitterLogin from "react-twitter-login";
+import{SiTwitter} from 'react-icons/si'
 
 const Navigbar = (props) => {
 
@@ -116,15 +116,12 @@ const Navigbar = (props) => {
                             </Form>
                         </Modal.Body>
                         <Modal.Footer>
-                            <TwitterLogin to='=https://api.twitter.com/oauth/authorize'
-                                authCallback={authHandler}
-                                // eslint-disable-next-line no-undef
-                                consumerKey={CONSUMER_KEY}
-                                // eslint-disable-next-line no-undef
-                                consumerSecret={CONSUMER_SECRET}
-                            />
+                        
                             <Button onClick={hideModal} variant="primary" type="Login">
                                 Login
+                            </Button>
+                            <Button onClick={hideModal} variant="primary" type="Login">
+                            <SiTwitter/><a style={{ textDecoration: 'none', color: '#00FFFF' }} target="_blank" href="http://127.0.0.1:4995/login/twitter"> Login With Twitter</a>
                             </Button>
                         </Modal.Footer>
                     </Modal>
