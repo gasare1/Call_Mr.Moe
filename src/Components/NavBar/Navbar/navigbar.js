@@ -3,7 +3,7 @@ import {
     NavLink, NavItem, Nav, NavbarBrand, Collapse, Navbar,
     NavbarToggler, Wrapper, Burger, Content, Menu, MenuButton, BurgerIcon
 } from './navbarelements'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsHouseDoorFill, BsFillQuestionCircleFill, BsSearch } from 'react-icons/bs'
 import { BiLogInCircle } from 'react-icons/bi'
@@ -15,8 +15,9 @@ import { Link } from 'react-scroll'
 import { Form, Button, Modal } from "react-bootstrap";
 import{SiTwitter} from 'react-icons/si'
 
-const Navigbar = (props) => {
-
+const Navigbar = ({userName}) => {
+   
+       
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -33,8 +34,6 @@ const Navigbar = (props) => {
     const authHandler = (err, data) => {
         console.log(err, data);
     };
-    const CONSUMER_SECRET = 'wh1krGw2GEVtm5sAqU6PzlGG6JS1npO8XjiFmDwC4m2Q0cdy71'
-    const CONSUMER_KEY = 'skPSQ6f9tVoUdgI193TWYbFWA'
     return (
 
         <Navbar >
@@ -61,6 +60,9 @@ const Navigbar = (props) => {
                     </NavItem>
                     <NavItem >
                         <NavLink onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Log in</a></NavLink>
+                    </NavItem>
+                    <NavItem >
+                        <NavLink ><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > {userName} </a></NavLink>
                     </NavItem>
 
 
@@ -121,7 +123,7 @@ const Navigbar = (props) => {
                                 Login
                             </Button>
                             <Button onClick={hideModal} variant="primary" type="Login">
-                            <SiTwitter/><a style={{ textDecoration: 'none', color: '#00FFFF' }} target="_blank" href="http://127.0.0.1:4995/login/twitter"> Login With Twitter</a>
+                            <SiTwitter/><a style={{ textDecoration: 'none', color: '#00FFFF' }} target="_blank" href="http://127.0.0.1:4995/login/twitter"> Login With Twitter </a>
                             </Button>
                         </Modal.Footer>
                     </Modal>
