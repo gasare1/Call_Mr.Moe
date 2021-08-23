@@ -27,13 +27,13 @@ jwt = JWTManager(app)
         
 @app.route("/login", methods=["POST"])
 def login():
-    user = User.load_from_db_by_email(['email'])
-    print(user)
+    
 
     email =  request.json.get("email")
     password = request.json.get("password")
-    if email != user.email or password != user.password :
-        print("You entered", user,password)
+    user = User.load_from_db_by_email(['email']) 
+    if email != ['email'] or password != ['password'] :
+        print("You entered", email , password)
         return jsonify({"msg": "Bad username or password"}), 401
 
     access_token = create_access_token(identity=email)

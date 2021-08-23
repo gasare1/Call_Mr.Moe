@@ -19,7 +19,8 @@ class User:
     @classmethod
     def load_from_db_by_email(cls, email):
         with CursorFromConnectionFromPool() as cursor:
-            cursor.execute('''SELECT * FROM users''', (email,))
+            cursor.execute(""" SELECT * FROM users WHERE users.email = '$s'
+            """, (email,))
             user_data = cursor.fetchone()
             if user_data:
                 return cls( email = user_data[1], password = user_data[2], id = user_data[0])
