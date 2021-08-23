@@ -3,7 +3,7 @@ import {
     NavLink, NavItem, Nav, NavbarBrand, Collapse, Navbar,
     NavbarToggler, Wrapper, Burger, Content, Menu, MenuButton, BurgerIcon
 } from './navbarelements'
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsHouseDoorFill, BsFillQuestionCircleFill, BsSearch } from 'react-icons/bs'
 import { BiLogInCircle } from 'react-icons/bi'
@@ -12,18 +12,39 @@ import { MdEmail } from 'react-icons/md'
 import { CgMenuLeft } from 'react-icons/cg'
 import { RiMenuFoldLine } from 'react-icons/ri'
 import { Link } from 'react-scroll'
-import { Form, Button, Modal } from "react-bootstrap";
-import{SiTwitter} from 'react-icons/si'
+import { Form, Button, Modal, Row, Col } from "react-bootstrap";
+import { SiTwitter } from 'react-icons/si'
+import axios from 'axios';
+import Login from './login';
+import Register from './register';
 
-const Navigbar = ({userName}) => {
-   
-       
+
+const Navigbar = () => {
+
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        const data = {
+            "email": this.email,
+            "password": this.password
+        }
+
+        axios.post('http://127.0.0.1:5000/regiser', data)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
 
     const [isLoginOpen, setIsLoginOpen] = React.useState(false);
-
+    const [isRegisterOpen, setRegisterOpen] = React.useState(false);
     const showModal = () => {
         setIsLoginOpen(true);
     };
@@ -34,6 +55,10 @@ const Navigbar = ({userName}) => {
     const authHandler = (err, data) => {
         console.log(err, data);
     };
+
+
+
+
     return (
 
         <Navbar >
@@ -62,7 +87,7 @@ const Navigbar = ({userName}) => {
                         <NavLink onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Log in</a></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink ><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > {userName} </a></NavLink>
+                        <NavLink ><a style={{ textDecoration: 'none', color: 'white' }} target="_blank"  >  </a></NavLink>
                     </NavItem>
 
 
@@ -85,8 +110,28 @@ const Navigbar = ({userName}) => {
                             </Menu>
                         </Content>
                     </Wrapper>
+                    <Modal show={isRegisterOpen} onHide={hideModal}>
+                        <Modal.Header  closeButton = {isOpen}  >
+                            <Modal.Title>
+                                <div className='container'>
+                                    <div className='col'>
+                                        <div className='row'>
+                                            <h1>Register</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body >
+                            <Form>
+                                <Register />
+                            </Form>
+
+                        </Modal.Body>
+
+                    </Modal>
                     <Modal show={isLoginOpen} onHide={hideModal}>
-                        <Modal.Header closeButton>
+                        <Modal.Header  closeButton>
                             <Modal.Title>
                                 <div className='container'>
                                     <div className='col'>
@@ -98,35 +143,24 @@ const Navigbar = ({userName}) => {
                             </Modal.Title>
                         </Modal.Header>
                         <Modal.Body >
-                            <Form>
-                                <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email or Username" />
-                                    <Form.Text className="text-muted">
-                                        We'll never share your email with anyone else.
-                                    </Form.Text>
-                                </Form.Group>
+                            <Form >
 
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Remember" />
-                                </Form.Group>
+                                <Login />
 
                             </Form>
+
                         </Modal.Body>
                         <Modal.Footer>
-                        
-                            <Button onClick={hideModal} variant="primary" type="Login">
-                                Login
+
+                            <Button onClick={setRegisterOpen} variant="primary" type="Login">
+                                Register
                             </Button>
                             <Button onClick={hideModal} variant="primary" type="Login">
-                            <SiTwitter/><a style={{ textDecoration: 'none', color: '#00FFFF' }} target="_blank" href="http://127.0.0.1:4995/login/twitter"> Login With Twitter </a>
+                                <SiTwitter /><a style={{ textDecoration: 'none', color: '#00FFFF' }} target="_blank" href="http://127.0.0.1:4995/login/twitter"> Login With Twitter </a>
                             </Button>
                         </Modal.Footer>
                     </Modal>
+
 
                     <BurgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
                         <CgMenuLeft  > {isOpen ? "menu_open" : "menu"}</CgMenuLeft>

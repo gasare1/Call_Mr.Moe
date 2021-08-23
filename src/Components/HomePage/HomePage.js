@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundimage from '../../../images/zac-gudakov-ztWpwTEx728-unsplash.jpg'
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Home } from './Homeelements'

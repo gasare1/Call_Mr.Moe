@@ -1,24 +1,28 @@
-from database import CursorConnectionFromPool
+from databasecon import CursorFromConnectionFromPool
+import oauth2
+import json
 
 
 class User:
-    def __init__(self, email, first_name, last_name, id):
-        self.email = email
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, email, password, id):
+        self.email= email
+        self.password = password
         self.id = id
-
+        
     def __repr__(self):
         return "<User {}>".format(self.email)
-
     def save_to_db(self):
-        with CursorConnectionFromPool() as cursor:
-            cursor.execute('INSERT INTO userss (email,first_name,las_name) VALUES(%s,%s,%s)',
-                           (self.email, self.first_name, self.last_name))
+        with CursorFromConnectionFromPool() as cursor:
+            cursor.execute('INSERT INTO users (email, password ) VALUES (%s, %s)',
+                           (self.email, self.password))
 
     @classmethod
-    def load_from_db_by(cls, email):
-        with CursorConnectionFromPool() as cursor:
-            cursor.execute('SELECT * FROM userss WHERE email=%s', (email,))
+    def load_from_db_by_email(cls, email):
+        with CursorFromConnectionFromPool() as cursor:
+            cursor.execute('''SELECT * FROM users''', (email,))
             user_data = cursor.fetchone()
-            return cls(email=user_data[3], last_name=user_data[2], first_name=user_data[1], id=user_data[0])
+            if user_data:
+                return cls( email = user_data[1], password = user_data[2], id = user_data[0])
+
+    
+    
