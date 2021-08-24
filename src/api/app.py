@@ -1,82 +1,101 @@
-from abc import get_cache_token
-from flask import Flask
-from flask import jsonify
-from user import User
-from flask import Flask, render_template, session, redirect, request, url_for, g
-from flask_jwt_extended import create_access_token
-from flask_jwt_extended import get_jwt_identity
-from flask_jwt_extended import jwt_required
-from flask_jwt_extended import JWTManager
-from databasecon import Database
-from flask_cors import CORS
+from flask import Flask, jsonify, request, session, redirect
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_required, current_user, login_user, logout_user
+from flask_cors import CORS #pip install -U flask-cors
+from datetime import timedelta
+from models import Login, db
 
-app = Flask(__name__, static_folder='../../build')
+ 
+import psycopg2 #pip install psycopg2 
+import psycopg2.extras
 
-CORS(app)
-app.secret_key = '1234'
+app = Flask(__name__)
+db.init_app(app)
+app.config['SECRET_KEY'] = 'cairocoders-ednalan'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=10)
+app.config["JWT_SECRET_KEY"] = "hkajhskjdhakjhsjkdhaksjydkagsbvhdajkshdas4546asd"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://fvfkyplb:xNtNNQZjhMksOec28bJH_g_gisWeZAcZ@chunee.db.elephantsql.com/fvfkyplb"  
+CORS(app) 
+ 
+DB_HOST = "chunee.db.elephantsql.com"
+DB_NAME = "fvfkyplb"
+DB_USER = "fvfkyplb"
+DB_PASS = "xNtNNQZjhMksOec28bJH_g_gisWeZAcZ"
+     
+conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 
-Database.initialise()
-# Setup the Flask-JWT-Extended extension
-app.config["JWT_SECRET_KEY"] = "hkajhskjdhakjhsjkdhaksjydkagsbvhdajkshdas4546asd"  # Change this!
-jwt = JWTManager(app)
+ 
+@app.route('/')
+def home():
+    passhash = generate_password_hash('cairocoders')
+    print(passhash)
+    if 'username' in session:
+        username = session['username']
+        return jsonify({'message' : 'You are already logged in', 'username' : username})
+    else:
+        resp = jsonify({'message' : 'Unauthorized'})
+        resp.status_code = 401
+        return resp
+@app.route('/registeruser', methods=['POST', 'GET'])
+def register():
+    if 'username' in session:
+        username = session['username']
+        return jsonify({'message' : 'You are already logged in', 'username' : username})
 
+    if request.method == 'POST':
+        email = request.json.get("email")
+        username = request.json.get('username')
+        password = request.json.get('password')
 
-# Create a route to authenticate your users and return JWTs. The
-# create_access_token() function is used to actually generate the JWT.
+        if Login.query.filter_by(email=email).first():
+            return ('Email already Present')
 
+        user = Login(email=email, username=username)
+        user.set_password(password)
+        db.session.add(user)
+        db.session.commit()
         
-@app.route("/login", methods=["POST"])
+        resp = jsonify({'message' : 'You have Registered Successfully'})
+        resp.status_code = 200
+        return resp
+@app.route('/login', methods=['POST'])
 def login():
-    
-
-    email =  request.json.get("email")
-    password = request.json.get("password")
-    user = User.load_from_db_by_email(['email']) 
-    if email != ['email'] or password != ['password'] :
-        print("You entered", email , password)
-        return jsonify({"msg": "Bad username or password"}), 401
-
-    access_token = create_access_token(identity=email)
-    print(access_token)
-    return jsonify(access_token=access_token)
-
+    _json = request.json
+    _username = _json['username']
+    _password = _json['password']
+    print(_password)
+    # validate the received values
+    if _username and _password:
+        #check user exists          
+        cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+          
+        sql = "SELECT * FROM registeredusers WHERE username=%s"
+        sql_where = (_username,)
+          
+        cursor.execute(sql, sql_where)
+        row = cursor.fetchone()
+        username = row['username']
+        password = row['password_hash']
+        if row:
+            if check_password_hash(password, _password):
+                session['username'] = username
+                cursor.close()
+                return jsonify({'message' : 'You are logged in successfully'})
+            else:
+                resp = jsonify({'message' : 'Bad Request - invalid password'})
+                resp.status_code = 400
+                return resp
+    else:
+        resp = jsonify({'message' : 'Bad Request - invalid credendtials'})
+        resp.status_code = 400
+        return resp
+          
 @app.route('/logout')
 def logout():
-    session.clear()
-    return redirect(url_for('profile'))
-
-
-
-@app.route("/register", methods = ['POST'])
-def register():
-    user = User.load_from_db_by_email(['email'])
-    email =  request.json.get("email")
-    password = request.json.get("password")
-    if user :
-        user = User(email, password,
-                 None)
-        user.save_to_db()
-    print(user)
-    return jsonify({"msg": "You have been Registered"}), 200
-
-  
-    
-
-@app.route('/profile')
-def profile():
-    return render_template('home.html', user=g.user)
-
-# Protect a route with jwt_required, which will kick out requests
-# without a valid JWT present.
-@app.route("/protected", methods=["GET"])
-
-
-@jwt_required()
-def protected():
-    # Access the identity of the current user with get_jwt_identity
-    current_user = get_jwt_identity()
-    return jsonify(logged_in_as=current_user), 200
-
-
+    if 'username' in session:
+        session.pop('username', None)
+    return jsonify({'message' : 'You successfully logged out'})
+          
 if __name__ == "__main__":
-    app.run()
+    app.run(host='localhost', port=4995)

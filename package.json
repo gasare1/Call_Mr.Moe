@@ -10,6 +10,7 @@
     "axios": "^0.21.1",
     "babel-jest": "^26.6.0",
     "bootstrap": "^5.0.2",
+    "cors": "^2.8.5",
     "form-data": "^4.0.0",
     "psycopg2-binary": "0.0.1",
     "python-shell": "^3.0.0",

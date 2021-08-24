@@ -6,18 +6,21 @@ const Register = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
     const [redirect, setRedirect] = useState(false)
 
 
     const submit = async (e) => {
         e.preventDefault()
-        await fetch( 'http://127.0.0.1:5000/register', {
+        await fetch( ' http://localhost:4995/registeruser', {
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
             
                 "email": email,
+                "username": username,
                 "password": password
+
             })
         });
         
@@ -37,6 +40,10 @@ const Register = () => {
                         <Form.Control type="email" placeholder="Enter email" required onChange={e => setEmail(e.target.value)} />
                     </Form.Group>
 
+                    <Form.Group as={Col} controlId="formGridPassword">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="username" placeholder="Username" required onChange={e => setUsername(e.target.value)} />
+                    </Form.Group>
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" required onChange={e => setPassword(e.target.value)} />
