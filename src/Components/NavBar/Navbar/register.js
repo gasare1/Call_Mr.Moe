@@ -12,7 +12,7 @@ const Register = () => {
 
     const submit = async (e) => {
         e.preventDefault()
-        await fetch( ' http://localhost:4995/registeruser', {
+        await fetch( 'https://moesdatabase.herokuapp.com/register', {
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -33,7 +33,7 @@ const Register = () => {
     
     return (
         <div>
-            <Form onSubmit={submit}>
+            <Form onSubmit={submit} >
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
@@ -84,7 +84,7 @@ const Register = () => {
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" value="Submit" onClick = {submit}>
+                <Button variant="primary" type="submit" value="Submit">
                     Register
                 </Button>
             </Form>
