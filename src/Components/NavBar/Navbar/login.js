@@ -44,7 +44,9 @@ export default class Login extends Component {
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-                    <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+                    <Button variant="primary" type="submit" value ='Submit' onClick={this.handleSubmit} >
+                        Login
+                    </Button>
                 </Form>
             </div>
         )
