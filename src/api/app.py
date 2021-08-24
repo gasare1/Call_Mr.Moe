@@ -98,4 +98,4 @@ def logout():
     return jsonify({'message' : 'You successfully logged out'})
           
 if __name__ == "__main__":
-    app.run(host='localhost', port=4995)
+    app.run(debug=False,host="0.0.0.0")
