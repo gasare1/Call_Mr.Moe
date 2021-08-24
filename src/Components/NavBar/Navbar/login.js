@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 export default class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
     handleSubmit = e => {
         e.preventDefault();
         const data = {
@@ -24,7 +28,7 @@ export default class Login extends Component {
     render() {
         return (
             <div>
-                <Form onSubmit={this.handleSubmit} >
+                <Form onSubmit={this.handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="username" placeholder="Enter Username"  onChange={e=>this.username = e.target.value} />
@@ -40,9 +44,7 @@ export default class Login extends Component {
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-                    <Button variant="primary" type="submit" value ='Submit'  href ="{{url_for('login')}}" >
-                        Login
-                    </Button>
+                    <input type="submit" value="Submit" onClick={this.handleSubmit}/>
                 </Form>
             </div>
         )

@@ -22,21 +22,7 @@ import Register from './register';
 const Navigbar = () => {
 
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        const data = {
-            "email": this.email,
-            "password": this.password
-        }
 
-        axios.post('http://127.0.0.1:5000/regiser', data)
-            .then(res => {
-                console.log(res)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }
 
 
     const [isOpen, setIsOpen] = useState(false);
@@ -45,16 +31,17 @@ const Navigbar = () => {
 
     const [isLoginOpen, setIsLoginOpen] = React.useState(false);
     const [isRegisterOpen, setRegisterOpen] = React.useState(false);
+
     const showModal = () => {
         setIsLoginOpen(true);
+        setRegisterOpen(false);
     };
 
     const hideModal = () => {
         setIsLoginOpen(false);
+        setRegisterOpen(false);
     };
-    const authHandler = (err, data) => {
-        console.log(err, data);
-    };
+ 
 
 
 
@@ -111,7 +98,7 @@ const Navigbar = () => {
                         </Content>
                     </Wrapper>
                     <Modal show={isRegisterOpen} onHide={hideModal}>
-                        <Modal.Header  closeButton = {isOpen}  >
+                        <Modal.Header  closeButton  >
                             <Modal.Title>
                                 <div className='container'>
                                     <div className='col'>
