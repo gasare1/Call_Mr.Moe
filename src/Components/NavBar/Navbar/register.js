@@ -8,8 +8,11 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
     const [redirect, setRedirect] = useState(false)
+    const [isOpen,setIsOpen] = React.useState(false);
 
-
+    const hideModal = () => {
+        setIsOpen(false);
+    };
     const submit = async (e) => {
         e.preventDefault()
         await fetch( ' https://moesdatabase.herokuapp.com/registeruser', {
@@ -88,6 +91,9 @@ const Register = () => {
                 <Button variant="primary" type="submit" value="Submit" onClick={submit}>
                     Register
                 </Button>
+                <Modal.Footer>
+                        <button onClick={hideModal} className="btn btn-danger">Cancel</button>
+                </Modal.Footer>
             </Form>
         </div>
     )

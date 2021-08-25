@@ -10,6 +10,7 @@ import {BiUser} from 'react-icons/bi'
 import {HiOutlineMail} from 'react-icons/hi'
 import{SiMinutemailer} from 'react-icons/si'
 import './contact.css'
+import ContactModal from './Contactmodal';
 
 const Contact = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -78,27 +79,11 @@ const Contact = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <Form>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Name <BiUser/> </Form.Label>
-                                <Form.Control type="email" placeholder="First and Last Name" />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Email Address <HiOutlineMail/></Form.Label>
-                                <Form.Control type="email" placeholder="name@example.com" />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Phone <FaPhone/> </Form.Label>
-                                <Form.Control type="email" placeholder="###-###-###" />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Additional Information</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                            </Form.Group>
+                            <ContactModal/>
                         </Form>
                     </Modal.Body>
                     <Modal.Footer>
                         <button onClick={hideModal} className="btn btn-danger">Cancel</button>
-                        <button onClick={hideModal} className="btn btn-primary">Submit</button>
                     </Modal.Footer>
                 </Modal>
             </div>
