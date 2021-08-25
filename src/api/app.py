@@ -69,7 +69,7 @@ def submit():
             phone = request.json.get('phone')
             additional_information = request.json.get('additional_information')
 
-            user = SubmitForm(name=name, email=email,phone=phone, additional_information=additional_information)
+            user = SubmitForm(name=name, email=email,phone=phone, additional_information=additional_info)
             db.session.add(user)
             db.session.commit()
             
