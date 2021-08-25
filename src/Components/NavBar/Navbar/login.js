@@ -13,7 +13,7 @@ export default class Login extends Component {
             "password": this.password
         }
         const axios = require('axios')
-        axios.post(' https://moesdatabase.herokuapp.com/login', data)
+        axios.post(' https://moesbackend.herokuapp.com/login', data)
             .then(res => {
                 localStorage.setItem('token',res.token)
                 

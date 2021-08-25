@@ -15,7 +15,7 @@ const Register = () => {
     };
     const submit = async (e) => {
         e.preventDefault()
-        await fetch( ' https://moesdatabase.herokuapp.com/registeruser', {
+        await fetch( ' https://moesbackend.herokuapp.com/registeruser', {
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
