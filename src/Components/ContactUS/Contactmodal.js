@@ -59,7 +59,7 @@ const ContactModal = (isOpen) => {
                     </Form.Group>
                 </Row>
                 <Button variant="primary" type="submit" value="Submit" onClick={submit}>
-                    Register
+                    Submit
                 </Button>
                 
             </Form>
