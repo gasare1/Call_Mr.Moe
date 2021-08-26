@@ -23,8 +23,8 @@ const Contact = () => {
         setIsOpen(false);
     };
     return (
-        <div className="card text-center" id='contact'>
-            <div className="card-header">
+        <div className="card text-center" id='contact' style={{background:'black'}}>
+            <div className="card-header" style={{color:'white'}}>
                 Home Of the Week
             </div>
             <div className='container'>
@@ -40,8 +40,8 @@ const Contact = () => {
                                         alt="Image One"
                                     />
                                     <Carousel.Caption>
-                                        <h3>Label for first slide</h3>
-                                        <p>Sample Text for Image One</p>
+                                        <h3>Coming Soon</h3>
+                                        <p></p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item interval={10000}>
@@ -51,8 +51,8 @@ const Contact = () => {
                                         alt="Image Two"
                                     />
                                     <Carousel.Caption>
-                                        <h3>Label for second slide</h3>
-                                        <p>Sample Text for Image Two</p>
+                                        <h3>Coming Soon</h3>
+                                        <p></p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                             </Carousel>
@@ -62,8 +62,8 @@ const Contact = () => {
             </div>
             
             <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 className="card-title">Nice Model Homes</h5>
+                <p className="card-text">If you are interested please contact us</p>
                 <a onClick={showModal} className="btn btn-primary">Contact Us  <FaPhone /></a>
                 <Modal show={isOpen} onHide={hideModal}>
                     <Modal.Header  closeButton>
