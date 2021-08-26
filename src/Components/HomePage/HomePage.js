@@ -12,7 +12,7 @@ const HomePage = () => {
                 data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">
                 <div className="row row-6">
-                    <h1 className="text-center">Project Name</h1>
+                    <h1 className="text-center">Welcome to Call Mr Moe</h1>
                 </div>
             </div>
             <section>
