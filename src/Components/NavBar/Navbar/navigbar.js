@@ -17,7 +17,7 @@ import { SiTwitter } from 'react-icons/si'
 import axios from 'axios';
 import Login from './login';
 import Register from './register';
-
+import image1 from "../../../images/moeslogo.png"
 
 const Navigbar = () => {
 
@@ -49,29 +49,30 @@ const Navigbar = () => {
     return (
 
         <Navbar >
-            <NavbarBrand style={{ color: 'white' }} href="/"><BsHouseDoorFill
-            /> Call Mr.Moe
+            <NavbarBrand style={{ color: 'white' }}  src={image1} href="/"> 
+                <img src={image1} style={{ color: 'white',marginBottom:'1px' }} />
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
+            
                 <Nav  >
                     <NavItem >
-                        <NavLink  > <Link to='home'><GiHouse /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Home</a></Link></NavLink>
+                        <NavLink  > <Link to='home'><GiHouse /><a style={{ textDecoration: 'none', color: 'black' }} target="_blank" > Home</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink  > <Link to='about'><MdEmail /> <a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Contact Us</a></Link></NavLink>
+                        <NavLink  > <Link to='about'><MdEmail /> <a style={{ textDecoration: 'none', color: 'black'}} target="_blank" > Contact Us</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink  > <Link to='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > About </a></Link></NavLink>
+                        <NavLink  > <Link to='contact'><BsFillQuestionCircleFill /><a style={{ textDecoration: 'none',color:'black' }} target="_blank" > About </a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink  > <Link to='homesearch'><BsSearch /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Search</a></Link></NavLink>
+                        <NavLink  > <Link to='homesearch'><BsSearch /><a style={{ textDecoration: 'none', color: 'black' }} target="_blank" > Search</a></Link></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink ><GiReceiveMoney /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
+                        <NavLink ><GiReceiveMoney /><a style={{ textDecoration: 'none', color: 'black' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Sign Up</a></NavLink>
+                        <NavLink onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: 'black' }} target="_blank" > Sign Up</a></NavLink>
                     </NavItem>
                     <NavItem >
                         <NavLink ><a style={{ textDecoration: 'none', color: 'white' }} target="_blank"  >  </a></NavLink>

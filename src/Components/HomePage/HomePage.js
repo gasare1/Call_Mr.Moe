@@ -12,7 +12,7 @@ const HomePage = () => {
                 data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000">
                 <div className="row row-6">
-                    <h1 className="text-center">Welcome to Call Mr Moe</h1>
+                    <h1 className="text-center" style={{ fontSize: '80px', fontFamily:'monospace' }}>Welcome to Call Mr Moe</h1>
                 </div>
             </div>
             <section>
@@ -22,8 +22,10 @@ const HomePage = () => {
                     <div class="row">
                         <div class="col-xs-12 center-block text-center">
                             <h1>The Valley Solutions Team</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <p style={{ fontSize: '20px', fontWeight:'bold' }}>
+                                “Owning a home is a keystone of wealth… both financial affluence and emotional security.”
+                                “Real estate cannot be lost or stolen, nor can it be carried away. Purchased with common sense, paid for in full, and managed with reasonable care, it is about the safest investment in the world.”
+                                –Franklin D. Roosevelt, U.S. President
                             </p>
                         </div>
                     </div>

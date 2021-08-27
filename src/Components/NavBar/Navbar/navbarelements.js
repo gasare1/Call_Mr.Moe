@@ -12,17 +12,17 @@ margin:1px;
 
 `
 export const NavLink = styled.div`
-color:#fff;
+color:#000;
 float:right;
 cursor: pointer;
 text-decoration:none;
 padding-bottom:30px;
 font-family: 'Mukta', sans-serif;;
-font-size:15px;
+font-size:20px;
 justify-content:space-between;
 position: sticky;
 
-&:hover{color:#8f44fd}
+&:hover{color:#fff}
 
 @media screen and (max-width:1024px){
     display:none;
@@ -32,11 +32,12 @@ position: sticky;
 
 `
 export const Navbar = styled.div`
-background-color:#000;
+
 position: -webkit-sticky;
-position: sticky;
+position:static;
 top:0;
 z-index:5;
+margin-bottom:-10rem;
 
 @media screen and (max-width:1024px){
   width:100%
@@ -57,11 +58,14 @@ cursor: pointer;
 font-family: 'Caveat', cursive;
 font-weight:bold;
 font-size:20px;
+margin-bottom:-6rem;
+z-index:-99;
 @media screen and (max-width:1024px){
    align-items: center;
    justify-content:center;
    display:flex;
    padding-top:20px;
+   margin-bottom:-5rem;
 }
 
 `
@@ -91,6 +95,7 @@ width:500px;
 height:500px;
 background:#ffff;
 border-radius:20px;
+margin-bottom:20rem;
 display:none;
 
 transform:
@@ -100,6 +105,7 @@ transform:
    transition: transform 0.45s;
 @media screen and (max-width:1024px){
    display:inline;
+
 }
 `
 export const Burger = styled.button`
