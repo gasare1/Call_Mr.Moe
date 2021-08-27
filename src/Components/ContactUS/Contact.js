@@ -62,9 +62,9 @@ const Contact = () => {
             </div>
             
             <div className="card-body">
-                <h5 className="card-title">Nice Model Homes</h5>
-                <p className="card-text">If you are interested please contact us</p>
-                <a onClick={showModal} className="btn btn-primary">Contact Us  <FaPhone /></a>
+                <h5 className="card-title" style={{color:'#fff'}}>Nice Model Homes</h5>
+                <p className="card-text"  style={{color:'#fff'}}>If you are interested please contact us</p>
+               
                 <Modal show={isOpen} onHide={hideModal}>
                     <Modal.Header  closeButton>
                         <Modal.Title>
@@ -88,9 +88,10 @@ const Contact = () => {
                 </Modal>
             </div>
             <div className="card-footer" style={{ color: '#000' }}>
-                Homes Available
             </div>
+            
         </div>
+        
     )
 }
 
