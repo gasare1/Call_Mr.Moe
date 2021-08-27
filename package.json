@@ -41,7 +41,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://moesbackend.herokuapp.com/",
+  "proxy": "http://glenasare15.pythonanywhere.com/",
   "browserslist": {
     "production": [
       ">0.2%",

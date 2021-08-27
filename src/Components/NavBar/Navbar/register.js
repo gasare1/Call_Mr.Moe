@@ -10,6 +10,7 @@ const Register = () => {
     const [city, setCity] = useState('');
     const [zip, setZip] = useState('');
     const [state, setStates] = useState('');
+    const [terms, setTerms] = useState('');
     const [redirect, setRedirect] = useState(false)
     const [isOpen, setIsOpen] = React.useState(false);
     const [isTermOpen, setIsTermOpen] = React.useState(false);
@@ -23,7 +24,7 @@ const Register = () => {
     };
     const submit = async (e) => {
         e.preventDefault()
-        await fetch(' https://moesbackend.herokuapp.com/register', {
+        await fetch(' http://glenasare15.pythonanywhere.com/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -34,7 +35,8 @@ const Register = () => {
                 "address": address,
                 "city": city,
                 "state": state,
-                "zip": zip
+                "zip": zip,
+                "terms": terms
 
             })
         });
@@ -72,10 +74,6 @@ const Register = () => {
                     <Form.Control placeholder="1234 Main St" required onChange={e => setAddress(e.target.value)} />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formGridAddress2">
-                    <Form.Label>Address 2</Form.Label>
-                    <Form.Control placeholder="Apartment, studio, or floor" required onChange={e => setAddress(e.target.value)} />
-                </Form.Group>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridCity">
@@ -150,7 +148,7 @@ const Register = () => {
                 <Row className="mb-3">
                     <Form.Group as={Col} className="mb-3" id="formGridCheckbox">
                         <Form.Check type="checkbox" label="Agree Terms" onClick={setIsTermOpen} />
-                        <Form.Control placeholder="Read Terms & Conditions and Print I Agree" required onChange={e => setZip(e.target.value)} />
+                        <Form.Control placeholder="Read Terms & Conditions and Print I Agree" required onChange={e => setTerms(e.target.value)} />
                     </Form.Group>
                 </Row>
 

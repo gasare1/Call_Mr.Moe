@@ -13,7 +13,7 @@ export default class Login extends Component {
             "password": this.password
         }
         const axios = require('axios')
-        axios.post(' https://moesbackend.herokuapp.com/login', data)
+        axios.post(' http://glenasare15.pythonanywhere.com/login', data)
             .then(res => {
                 localStorage.setItem('token',res.token)
                 
@@ -44,7 +44,7 @@ export default class Login extends Component {
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-                    <Button variant="primary" type="submit" value ='Submit' onClick={this.handleSubmit,this.props.hideModal} >
+                    <Button variant="primary" type="submit" value ='Submit' onClick={this.handleSubmit} >
                         Login
                     </Button>
                 </Form>
