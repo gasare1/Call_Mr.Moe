@@ -23,7 +23,7 @@ const Register = () => {
     };
     const submit = async (e) => {
         e.preventDefault()
-        await fetch(' https://moesbackend.herokuapp.com/registeruser', {
+        await fetch(' https://moesbackend.herokuapp.com/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -85,7 +85,7 @@ const Register = () => {
 
                     <Form.Group as={Col} controlId="formGridState">
                         <Form.Label>State</Form.Label>
-                        <Form.Select defaultValue="Choose..." >
+                        <Form.Select defaultValue="Choose..."  required onChange={e => setStates(e.target.value)} >
                             <option>Choose...</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -140,7 +140,6 @@ const Register = () => {
                             <option value="WY">Wyoming</option>
 
                         </Form.Select>
-                        <Form.Control required onChange={e => setStates(e.target.value)} />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridZip">
@@ -151,11 +150,11 @@ const Register = () => {
                 <Row className="mb-3">
                     <Form.Group as={Col} className="mb-3" id="formGridCheckbox">
                         <Form.Check type="checkbox" label="Agree Terms" onClick={setIsTermOpen} />
-                        <Form.Control required onChange={e => setZip(e.target.value)} />
+                        <Form.Control placeholder="Read Terms & Conditions and Print I Agree" required onChange={e => setZip(e.target.value)} />
                     </Form.Group>
                 </Row>
 
-                <Button variant="primary" type="submit" value="Submit" onClick={submit, hideModal}>
+                <Button variant="primary" type="submit" value="Submit" onClick={submit}>
                     Register
                 </Button>
                 <Modal.Footer>
