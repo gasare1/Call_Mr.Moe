@@ -1,8 +1,6 @@
 import React, { Component, useState } from 'react'
-import axios from 'axios';
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { Link, Redirect } from 'react-router-dom';
-import termsandcond from './Termsandcond';
 import Termsandcond from './Termsandcond';
 const Register = () => {
 
