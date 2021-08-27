@@ -83,7 +83,7 @@ const Contact = () => {
                         </Form>
                     </Modal.Body>
                     <Modal.Footer>
-                        <button onClick={hideModal} className="btn btn-danger">Cancel</button>
+                        <button onClick={hideModal} className="btn btn-danger">Close</button>
                     </Modal.Footer>
                 </Modal>
             </div>
