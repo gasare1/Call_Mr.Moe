@@ -93,7 +93,7 @@ overflow:hidden;
 z-index:1;
 width:500px;
 height:500px;
-background:#ffff;
+background:#fff;
 border-radius:20px;
 margin-bottom:20rem;
 display:none;
@@ -121,10 +121,10 @@ padding-bottom:30px;
 cursor: pointer;
 font-size:36px;
 display:none;
-color:#000;
+color:#fff;
 
 color:
-   ${p => p.isOpen ? 'black' : 'white'};
+   ${p => p.isOpen ? 'black' : 'black'};
 
 @media screen and (max-width:1024px){
    display:inline;
@@ -148,7 +148,7 @@ justify-content:center;
 align-items:center;
 display:flex;
 flex-direction:column;
-background:#000;
+background:#fff;
 
 `
 export const MenuButton = styled(Link)`

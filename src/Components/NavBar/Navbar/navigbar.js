@@ -17,7 +17,7 @@ import { SiTwitter } from 'react-icons/si'
 import axios from 'axios';
 import Login from './login';
 import Register from './register';
-import image1 from "../../../images/moeslogo.png"
+import image1 from "../../../images/newlogo.png"
 
 const Navigbar = () => {
 
@@ -49,8 +49,8 @@ const Navigbar = () => {
     return (
 
         <Navbar >
-            <NavbarBrand style={{ color: 'white' }}  src={image1} href="/"> 
-                <img src={image1} style={{ color: 'white',marginBottom:'1px' }} />
+            <NavbarBrand style={{ color: 'black' }}  src={image1} href="/"> 
+                <img src={image1} style={{ color: 'black',marginBottom:'1px' }} />
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
