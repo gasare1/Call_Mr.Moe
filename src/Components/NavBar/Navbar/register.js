@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { Link, Redirect } from 'react-router-dom';
-import Terms from './Terms';
+import Terms from '../Navbar/Terms';
 const Register = () => {
 
     const [email, setEmail] = useState('');
