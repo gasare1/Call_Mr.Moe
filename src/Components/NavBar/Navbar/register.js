@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { Link, Redirect } from 'react-router-dom';
-import Termsandcond from './Termsandcond';
+import Terms from './Terms';
 const Register = () => {
 
     const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ const Register = () => {
 
             })
         });
-        
+
 
         setRedirect(true);
     }
@@ -178,7 +178,7 @@ const Register = () => {
                 <Modal.Body >
                     <Form >
 
-                        <Termsandcond />
+                        <Terms/>
 
                     </Form>
 
