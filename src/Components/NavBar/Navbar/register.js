@@ -153,7 +153,7 @@ const Register = () => {
                 </Row>
 
                 <Button variant="primary" type="submit" value="Submit" onClick={submit}>
-                    Register
+                    Submit
                 </Button>
                 <Modal.Footer>
                     <button onClick={hideModal} className="btn btn-danger">Cancel</button>

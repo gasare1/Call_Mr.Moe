@@ -71,7 +71,7 @@ const Navigbar = () => {
                         <NavLink ><GiReceiveMoney /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></NavLink>
                     </NavItem>
                     <NavItem >
-                        <NavLink onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Log in</a></NavLink>
+                        <NavLink onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: 'white' }} target="_blank" > Sign Up</a></NavLink>
                     </NavItem>
                     <NavItem >
                         <NavLink ><a style={{ textDecoration: 'none', color: 'white' }} target="_blank"  >  </a></NavLink>
@@ -92,7 +92,7 @@ const Navigbar = () => {
                                 <MenuButton ><GiReceiveMoney /><a style={{ textDecoration: 'none', color: '#45424d' }} target="_blank" href="https://valleycasa.com/preferred-lenders/"> Loan Programs</a></MenuButton>
 
 
-                                <MenuButton onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: '#45424d' }} target="_blank" > Log in</a></MenuButton>
+                                <MenuButton onClick={showModal} isLoginOpen={isLoginOpen}><BiLogInCircle /><a style={{ textDecoration: 'none', color: '#45424d' }} target="_blank" > Sign Up</a></MenuButton>
 
                             </Menu>
                         </Content>
@@ -111,7 +111,7 @@ const Navigbar = () => {
                         </Modal.Header>
                         <Modal.Body >
                             <Form>
-                                <Register />
+                                
                             </Form>
 
                         </Modal.Body>
@@ -123,7 +123,7 @@ const Navigbar = () => {
                                 <div className='container'>
                                     <div className='col'>
                                         <div className='row'>
-                                            <h1>Log In</h1>
+                                            <h1>Sign Up</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -132,20 +132,11 @@ const Navigbar = () => {
                         <Modal.Body >
                             <Form >
 
-                                <Login />
+                            <Register />
 
                             </Form>
 
                         </Modal.Body>
-                        <Modal.Footer>
-
-                            <Button onClick={setRegisterOpen} variant="primary" type="Login">
-                                Register
-                            </Button>
-                            <Button onClick={hideModal} variant="primary" type="Login">
-                                <SiTwitter /><a style={{ textDecoration: 'none', color: '#00FFFF' }} target="_blank" href="http://127.0.0.1:4995/login/twitter"> Login With Twitter </a>
-                            </Button>
-                        </Modal.Footer>
                     </Modal>
 
 
