@@ -34,14 +34,18 @@ position: sticky;
 export const Navbar = styled.div`
 
 position: -webkit-sticky;
-position:static;
+position:sticky;
 top:0;
 z-index:5;
 margin-bottom:-10rem;
 
 @media screen and (max-width:1024px){
   width:100%
+  
 }
+&.active {
+    background:#000;
+  }
 
 `
 export const Nav = styled.div`

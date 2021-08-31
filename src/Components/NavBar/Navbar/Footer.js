@@ -14,7 +14,6 @@ function Footer() {
                         Call Mr.Moe
                     </div>
                     <div>
-                        Coming soon!!
                     </div>
 
                     <div className='container d-flex flex' style={{ padding: 20 }}>

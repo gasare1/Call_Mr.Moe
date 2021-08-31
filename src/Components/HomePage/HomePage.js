@@ -6,7 +6,7 @@ import { Home } from './Homeelements'
 const HomePage = () => {
     AOS.init();
     return (
-        <Home style={{}} id='home'>
+        <Home style={{}} id='home' className="shadow-lg p-3 mb-5 bg-white rounded">
 
             <div className="container-fluid" style={{ paddingTop: '15rem' }} data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"

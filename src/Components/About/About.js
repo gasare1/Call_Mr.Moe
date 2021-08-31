@@ -6,7 +6,8 @@ import Modal from "react-bootstrap/Modal";
 import { FaPhone } from 'react-icons/fa'
 import ContactModal from './../ContactUS/Contactmodal';
 import Form from "react-bootstrap/Form";
-import{SiMinutemailer} from 'react-icons/si'
+import { SiMinutemailer } from 'react-icons/si'
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn, MDBRipple } from 'mdb-react-ui-kit';
 
 const About = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -19,67 +20,58 @@ const About = () => {
         setIsOpen(false);
     };
     return (
-        <div id='about'>
+        <div id='about' className="shadow-lg p-3 mb-5 bg-white rounded" style={{ justifyContent: 'center', alignItems: 'center',display:'flex', margin:'20px', borderRadius:'20px' }}>
+
+            <MDBCard style={{ maxWidth: '22rem', borderRadius:'20px',margin:'100px'  }} className="shadow-lg p-3 mb-5 bg-white rounded" >
+                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                    <MDBCardImage src={image1} fluid alt='...' />
+                    <a>
+                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                    </a>
+                </MDBRipple>
+                <MDBCardBody>
+                    <MDBCardTitle>Coming Soon</MDBCardTitle>
+                    <MDBCardText>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </MDBCardText>
+                    <MDBBtn href='#'>Add</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+            <MDBCard style={{ maxWidth: '22rem', borderRadius:'20px' ,margin:'100px' }}  className="shadow-lg p-3 mb-5 bg-white rounded">
+                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                    <MDBCardImage src={image1} fluid alt='...' type="image" />
+                    <a>
+                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                    </a>
+                </MDBRipple>
+                <MDBCardBody>
+                    <MDBCardTitle>Coming Soon</MDBCardTitle>
+                    <MDBCardText>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </MDBCardText>
+                    <MDBBtn href='#'>add</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+            <MDBCard className="shadow-lg p-3 mb-5 bg-white rounded" style={{ maxWidth: '22rem', borderRadius:'20px',margin:'100px'  }}  >
+                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                    <MDBCardImage src={image1} fluid alt='...' />
+                    <a>
+                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                    </a>
+                </MDBRipple>
+                <MDBCardBody>
+                    <MDBCardTitle>Coming Soon</MDBCardTitle>
+                    <MDBCardText>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </MDBCardText>
+                    <MDBBtn href='#'>Add</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
             
-            <div className="card-group">
-                <div className="card">
-                <btn  className='btn btn-secondary' >Coming Soon!!</btn>
-                    <Link to='home'><img className="card-img-top" src={image1} alt="Card image cap" /></Link>
-                    <div className="card-body">
-                        <h5 className="card-title">Coming Soon</h5>
-                        <p className="card-text">Coming soon watch out!!</p>
-                    </div>
-                    <div className="card-footer">
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div className="card">
-                <btn onClick={showModal} className='btn btn-secondary' >Contact Us  <FaPhone /></btn>
-                <img className="card-img-top" src={image1} alt="Card image cap" />
-                    <div className="card-body">
-                        <h5 className="card-title">Coming Soon</h5>
-                        <p className="card-text">Coming soon watch out!!.</p>
-                    </div>
-                    <div className="card-footer">
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div className="card">
-                <btn  className='btn btn-secondary' >Coming Soon!!</btn>
-                    <img className="card-img-top" src={image1} alt="Card image cap" />
-                    <div className="card-body">
-                        <h5 className="card-title">Coming Soon</h5>
-                        <p className="card-text">Coming soon watch out!!.</p>
-                    </div>
-                    <div className="card-footer">
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <Modal show={isOpen} onHide={hideModal}>
-                    <Modal.Header  closeButton>
-                        <Modal.Title>
-                            <div className='container'>
-                                <div className='col'>
-                                    <div className='row'>
-                                        <h1>Contact Us <SiMinutemailer/></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form>
-                            <ContactModal/>
-                        </Form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <button onClick={hideModal} className="btn btn-danger">Cancel</button>
-                    </Modal.Footer>
-                </Modal>
-                
-            </div>
-            
+           
+
         </div>
+
     )
 }
 

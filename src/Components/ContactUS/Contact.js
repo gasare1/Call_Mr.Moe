@@ -6,9 +6,9 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Carousel from 'react-bootstrap/Carousel';
 import { FaPhone } from 'react-icons/fa'
-import {BiUser} from 'react-icons/bi'
-import {HiOutlineMail} from 'react-icons/hi'
-import{SiMinutemailer} from 'react-icons/si'
+import { BiUser } from 'react-icons/bi'
+import { HiOutlineMail } from 'react-icons/hi'
+import { SiMinutemailer } from 'react-icons/si'
 import './contact.css'
 import ContactModal from './Contactmodal';
 
@@ -23,18 +23,19 @@ const Contact = () => {
         setIsOpen(false);
     };
     return (
-        <div className="card text-center" id='contact' style={{background:'black'}}>
-            <div className="card-header" style={{color:'white'}}>
+        
+        <div className="card text-center" id='contact'  className="shadow-lg p-3 mb-5 bg-white rounded">
+            <div className="card-header shadow-lg p-3 mb-5 bg-white rounded" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                 Home Of the Week
             </div>
-            <div className='container'>
+            <div className='container' >
                 <div className='col'>
                     <div className='row'>
                         <div className='carousel'>
 
-                            <Carousel>
+                            <Carousel style={{ borderRadius: '20px' }}  >
                                 <Carousel.Item interval={10000}>
-                                    <img
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
                                         className="d-block w-100"
                                         src={image1}
                                         alt="Image One"
@@ -44,8 +45,8 @@ const Contact = () => {
                                         <p></p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
-                                <Carousel.Item interval={10000}>
-                                    <img
+                                <Carousel.Item interval={10000} >
+                                    <img className="shadow-lg p-3 mb-5 bg-grey rounded"
                                         className="d-block w-100 h-100"
                                         src={image1}
                                         alt="Image Two"
@@ -60,38 +61,17 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="card-body">
-                <h5 className="card-title" style={{color:'#fff'}}>Nice Model Homes</h5>
-                <p className="card-text"  style={{color:'#fff'}}>If you are interested please contact us</p>
-               
-                <Modal show={isOpen} onHide={hideModal}>
-                    <Modal.Header  closeButton>
-                        <Modal.Title>
-                            <div className='container'>
-                                <div className='col'>
-                                    <div className='row'>
-                                        <h1>Contact Us <SiMinutemailer/></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form>
-                            <ContactModal/>
-                        </Form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <button onClick={hideModal} className="btn btn-danger">Close</button>
-                    </Modal.Footer>
-                </Modal>
+                <h5 className="card-title" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>Nice Model Homes</h5>
+                <p className="card-text" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>If you are interested please contact us</p>
+
             </div>
-            <div className="card-footer" style={{ color: '#000' }}>
-            </div>
-            
+
         </div>
-        
+
+
+
     )
 }
 
