@@ -173,3 +173,6 @@ font-weight:500;
 
 
 `
+export const Container = styled.div`
+
+`
