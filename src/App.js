@@ -20,15 +20,6 @@ function App() {
           <HomePage />
         </Route>
         <HomepageNav/>
-        <Route>
-          <HomeSearch path="/homesearch" component={HomeSearch} />
-        </Route>
-        <Route  >
-          <Contact path="/contact" component={Contact} />
-        </Route>
-        <Route>
-          <About path="/about" component={About} />
-        </Route>
         <Switch />
 
         <Footer />
