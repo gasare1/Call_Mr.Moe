@@ -20,9 +20,7 @@ function App() {
           <HomePage />
         </Route>
         <HomepageNav />
-
         <Switch />
-
         <Footer />
       </Router>
 
