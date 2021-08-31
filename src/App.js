@@ -18,8 +18,9 @@ function App() {
         <Switch />
         <Route path="/" component={HomePage} exact >
           <HomePage />
+          <HomepageNav />
         </Route>
-        <HomepageNav />
+        
         <Switch />
         <Footer />
       </Router>
