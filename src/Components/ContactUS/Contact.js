@@ -23,12 +23,14 @@ const Contact = () => {
         setIsOpen(false);
     };
     return (
-        
-        <div className="card text-center" id='contact'  className="shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div className="card text-center" id='contact' className="shadow-lg p-3 mb-5 bg-white rounded">
             <div className="card-header shadow-lg p-3 mb-5 bg-white rounded" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                 Home Of the Week
             </div>
-            <div className='container' >
+            <div className='container' data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000" >
                 <div className='col'>
                     <div className='row'>
                         <div className='carousel'>

@@ -42,7 +42,7 @@ const Navigbar = () => {
     const [navBackground, setNavBackground] = useState('appBarTransparent')
     const navRef = React.useRef()
     navRef.current = navBackground
-    
+
 
 
 
@@ -103,7 +103,9 @@ const Navigbar = () => {
     window.addEventListener('scroll', changeBackground);
     return (
         <div className={classes.root} >
-            <Navbar position = 'fixed' className={classes.appBarTransparent}>
+            <Navbar position='fixed' className={classes.appBarTransparent} data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                 <NavbarBrand style={{ color: 'black' }} src={image1} href="/">
                     <img src={image1} style={{ color: 'black', marginBottom: '1px' }} />
                 </NavbarBrand>

@@ -20,9 +20,11 @@ const About = () => {
         setIsOpen(false);
     };
     return (
-        <div id='about' className="shadow-lg p-3 mb-5 bg-white rounded" style={{ justifyContent: 'center', alignItems: 'center',display:'flex', margin:'20px', borderRadius:'20px' }}>
+        <div id='about' className="shadow-lg p-3 mb-5 bg-white rounded" style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', margin: '20px', borderRadius: '20px' }}>
 
-            <MDBCard style={{ maxWidth: '22rem', borderRadius:'20px',margin:'100px'  }} className="shadow-lg p-3 mb-5 bg-white rounded" >
+            <MDBCard style={{ maxWidth: '22rem', borderRadius: '20px', margin: '100px' }} className="shadow-lg p-3 mb-5 bg-white rounded" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500" >
                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
                     <MDBCardImage src={image1} fluid alt='...' />
                     <a>
@@ -37,7 +39,9 @@ const About = () => {
                     <MDBBtn href='#'>Add</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
-            <MDBCard style={{ maxWidth: '22rem', borderRadius:'20px' ,margin:'100px' }}  className="shadow-lg p-3 mb-5 bg-white rounded">
+            <MDBCard style={{ maxWidth: '22rem', borderRadius: '20px', margin: '100px' }} className="shadow-lg p-3 mb-5 bg-white rounded" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
                     <MDBCardImage src={image1} fluid alt='...' type="image" />
                     <a>
@@ -52,7 +56,9 @@ const About = () => {
                     <MDBBtn href='#'>add</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
-            <MDBCard className="shadow-lg p-3 mb-5 bg-white rounded" style={{ maxWidth: '22rem', borderRadius:'20px',margin:'100px'  }}  >
+            <MDBCard className="shadow-lg p-3 mb-5 bg-white rounded" style={{ maxWidth: '22rem', borderRadius: '20px', margin: '100px' }} data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500" >
                 <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
                     <MDBCardImage src={image1} fluid alt='...' />
                     <a>
@@ -67,8 +73,8 @@ const About = () => {
                     <MDBBtn href='#'>Add</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
-            
-           
+
+
 
         </div>
 
