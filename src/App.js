@@ -19,7 +19,16 @@ function App() {
         <Route path="/" component={HomePage} exact >
           <HomePage />
         </Route>
-        <HomepageNav/>
+        <Route path="/" component={HomeSearch} exact >
+          <HomeSearch />
+        </Route>
+        <Route path="/" component={Contact} exact >
+          <Contact/>
+        </Route>
+        <Route path="/" component={About} exact >
+          <About />
+        </Route>
+        
         <Switch />
 
         <Footer />

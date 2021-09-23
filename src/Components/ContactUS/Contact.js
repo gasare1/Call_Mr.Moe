@@ -24,8 +24,8 @@ const Contact = () => {
     };
     return (
 
-        <div className="card text-center" id='contact' className="shadow-lg p-3 mb-5 bg-white rounded">
-            <div className="card-header shadow-lg p-3 mb-5 bg-white rounded" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+        <div className="card text-center" id='contact' >
+            <div  style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize:'70px',fontFamily:'Montserrat, sans-serif' }}>
                 Home Of the Week
             </div>
             <div className='container' data-aos="fade-up"
