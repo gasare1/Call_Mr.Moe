@@ -21,7 +21,7 @@ const HomePage = () => {
         <div>
             <Home id='home' >
 
-                <div className="container-fluid" style={{ paddingTop: '15rem' }} data-aos="fade-up"
+                <div className="container-fluid" style={{ paddingTop: '25rem' }} data-aos="fade-up"
                     data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000">
                     <div className="row row-6">

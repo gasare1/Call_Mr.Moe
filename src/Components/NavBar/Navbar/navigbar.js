@@ -368,10 +368,6 @@ const Navigbar = () => {
               </button>
             </Modal.Footer>
           </Modal>
-
-          <BurgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-            <CgMenuLeft> {isOpen ? "menu_open" : "menu"}</CgMenuLeft>
-          </BurgerIcon>
         </Nav>
       </Collapse>
     </Navbar>
