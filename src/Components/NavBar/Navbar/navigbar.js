@@ -51,10 +51,8 @@ const Navigbar = () => {
 
   const showModal = () => {
     setIsLoginOpen(true);
-    
   };
-  const showQ= () => {
-    
+  const showQ = () => {
     setQOpen(true);
   };
 
@@ -203,15 +201,18 @@ const Navigbar = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink onClick={showQ} isQOpen={isQOpen}>
-              <BiLogInCircle />
-              <a
-                style={{ textDecoration: "none", color: "gray" }}
-                target="_blank"
-              >
-                {" "}
-                Questionaire
-              </a>
+            <NavLink>
+              {" "}
+              <Link to="/buyer">
+                <GiHouse />
+                <a
+                  style={{ textDecoration: "none", color: "gray" }}
+                  target="_blank"
+                >
+                  {" "}
+                  Buyer
+                </a>
+              </Link>
             </NavLink>
           </NavItem>
           <NavItem>

@@ -9,6 +9,7 @@ import ScrollToTop from './Components/NavBar/Navbar/ScrollToTop';
 import HomeSearch from './Components/ContactUS/homeSearch';
 import React, { useState, useEffect } from 'react'
 import HomepageNav from './Components/HomePage/homepageNav';
+import Buyer from './Buyer/Buyer';
 function App() {
   return (
     <div className="d-flex flex-column h-100">
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/" component={About} exact >
           <About />
+        </Route>
+        <Route path="/buyer" component={Buyer} exact >
+          
         </Route>
         
         <Switch />
