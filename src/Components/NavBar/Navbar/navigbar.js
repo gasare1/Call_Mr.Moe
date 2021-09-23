@@ -12,7 +12,8 @@ import {
   Menu,
   MenuButton,
   BurgerIcon,
-  BurgerMenu,Mobilebtn
+  BurgerMenu,
+  Mobilebtn,
 } from "./navbarelements";
 import React, { useState, useEffect, useContext, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -45,17 +46,21 @@ const Navigbar = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   const [isLoginOpen, setIsLoginOpen] = React.useState(false);
-  const [isRegisterOpen, setRegisterOpen] = React.useState(false);
+  const [isQOpen, setQOpen] = React.useState(false);
   const [ismobileMenu, setmobileMenu] = React.useState(false);
 
   const showModal = () => {
     setIsLoginOpen(true);
-    setRegisterOpen(false);
+    
+  };
+  const showQ= () => {
+    
+    setQOpen(true);
   };
 
   const hideModal = () => {
     setIsLoginOpen(false);
-    setRegisterOpen(false);
+    setQOpen(false);
     setmobileMenu(false);
   };
 
@@ -106,8 +111,14 @@ const Navigbar = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav>
           <NavbarBrand />
-          <Mobilebtn><CgMenuLeft style={{marginLeft:'20px',fontSize:'40px', color:'white'}} onClick={showMobileModal} ismobileMenu={ismobileMenu} /></Mobilebtn>
-          
+          <Mobilebtn>
+            <CgMenuLeft
+              style={{ marginLeft: "20px", fontSize: "40px", color: "white" }}
+              onClick={showMobileModal}
+              ismobileMenu={ismobileMenu}
+            />
+          </Mobilebtn>
+
           <NavItem>
             <NavLink>
               {" "}
@@ -192,6 +203,18 @@ const Navigbar = () => {
             </NavLink>
           </NavItem>
           <NavItem>
+            <NavLink onClick={showQ} isQOpen={isQOpen}>
+              <BiLogInCircle />
+              <a
+                style={{ textDecoration: "none", color: "gray" }}
+                target="_blank"
+              >
+                {" "}
+                Questionaire
+              </a>
+            </NavLink>
+          </NavItem>
+          <NavItem>
             <NavLink>
               <a
                 style={{ textDecoration: "none", color: "gray" }}
@@ -227,7 +250,7 @@ const Navigbar = () => {
               >
                 {" "}
                 <NavItem>
-                  <NavLink style={{display:'flex'}}>
+                  <NavLink style={{ display: "flex" }}>
                     {" "}
                     <Link to="home">
                       <GiHouse />
@@ -242,7 +265,8 @@ const Navigbar = () => {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink  style={{display:'flex'}}
+                  <NavLink
+                    style={{ display: "flex" }}
                     onClick={showContactModal}
                     isContactOpen={isContactOpen}
                   >
@@ -258,7 +282,7 @@ const Navigbar = () => {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink  style={{display:'flex'}}>
+                  <NavLink style={{ display: "flex" }}>
                     {" "}
                     <Link to="contact">
                       <BsFillQuestionCircleFill />
@@ -273,7 +297,7 @@ const Navigbar = () => {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink  style={{display:'flex'}}>
+                  <NavLink style={{ display: "flex" }}>
                     {" "}
                     <Link to="homesearch">
                       <BsSearch />
@@ -288,7 +312,7 @@ const Navigbar = () => {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink  style={{display:'flex'}}>
+                  <NavLink style={{ display: "flex" }}>
                     <GiReceiveMoney />
                     <a
                       style={{ textDecoration: "none", color: "gray" }}
@@ -300,8 +324,12 @@ const Navigbar = () => {
                     </a>
                   </NavLink>
                 </NavItem>
-                <NavItem >
-                  <NavLink onClick={showModal} isLoginOpen={isLoginOpen}  style={{display:'flex'}}>
+                <NavItem>
+                  <NavLink
+                    onClick={showModal}
+                    isLoginOpen={isLoginOpen}
+                    style={{ display: "flex" }}
+                  >
                     <BiLogInCircle />
                     <a
                       style={{ textDecoration: "none", color: "gray" }}
@@ -367,6 +395,23 @@ const Navigbar = () => {
                 Close
               </button>
             </Modal.Footer>
+          </Modal>
+          <Modal show={isQOpen} onHide={hideModal}>
+            <Modal.Header closeButton></Modal.Header>
+            <Modal.Body closeButton>
+              <Form>
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSenvCb4UPSsSvITFXab_qxxcAYwn3Zg3gzo0HwZCo4cd-kTiw/viewform?embedded=true"
+                  width="640"
+                  height="4846"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                >
+                  Loading…
+                </iframe>
+              </Form>
+            </Modal.Body>
           </Modal>
         </Nav>
       </Collapse>
