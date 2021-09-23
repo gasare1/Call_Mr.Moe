@@ -26,11 +26,11 @@ function App() {
         <Route path="/" component={Contact} exact >
           <Contact/>
         </Route>
-        <Route path="/" component={About} exact >
+        <Route path="about" component={About} exact >
           <About />
         </Route>
         <Route path="/buyer" component={Buyer} exact >
-          
+          <Buyer/>
         </Route>
         
         <Switch />
