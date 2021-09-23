@@ -149,7 +149,7 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link style={{ textDecoration: "none" }} to="contact">
+              <Links style={{ textDecoration: "none" }} to="contact">
                 <BsFillQuestionCircleFill style={{color:'white'}} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
@@ -158,13 +158,13 @@ const Navigbar = () => {
                   {" "}
                   About{" "}
                 </a>
-              </Link>
+              </Links>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink>
               {" "}
-              <Link style={{ textDecoration: "none"}} to="homesearch">
+              <Links style={{ textDecoration: "none"}} to="homesearch">
                 <BsSearch style={{color:'white'}} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
@@ -173,7 +173,7 @@ const Navigbar = () => {
                   {" "}
                   Search
                 </a>
-              </Link>
+              </Links>
             </NavLink>
           </NavItem>
           <NavItem>
