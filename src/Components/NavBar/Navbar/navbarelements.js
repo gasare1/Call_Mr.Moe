@@ -139,7 +139,7 @@ export const Container = styled.div``;
 export const BurgerMenu = styled.div``;
 export const Mobilebtn = styled.div`
 
-
+display:none;
 @media screen and (max-width: 1024px) {
     display: flex;
     justify-content:center;
