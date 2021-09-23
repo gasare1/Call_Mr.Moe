@@ -68,7 +68,7 @@ export const NavbarBrand = styled.div`
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left:400px;
+    margin-left:300px;
   }
 `;
 export const Collapse = styled.div``;
@@ -138,7 +138,7 @@ export const MenuButton = styled(Link)`
 export const Container = styled.div``;
 export const BurgerMenu = styled.div``;
 export const Mobilebtn = styled.div`
-display:none;
+
 
 @media screen and (max-width: 1024px) {
     display: flex;

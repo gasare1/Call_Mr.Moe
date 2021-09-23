@@ -1,6 +1,6 @@
 import React from 'react'
-import image1 from '../../images/florian-schmidinger-b_79nOqf95I-unsplash (1).jpg'
-import image2 from '../../images/pixasquare-4ojhpgKpS68-unsplash (1).jpg'
+import image1 from '../../images/Houses/image0.jpeg'
+import image2 from '../../images/Houses/image1.jpeg'
 import 'bootstrap/dist/css/bootstrap.css';
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
@@ -11,7 +11,16 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { SiMinutemailer } from 'react-icons/si'
 import './contact.css'
 import ContactModal from './Contactmodal';
-
+import image3 from '../../images/Houses/image2.jpeg'
+import image4 from '../../images/Houses/image3.jpeg'
+import image5 from '../../images/Houses/image4.jpeg'
+import image6 from '../../images/Houses/image5.jpeg'
+import image7 from '../../images/Houses/image6.jpeg'
+import image8 from '../../images/Houses/image7.jpeg'
+import image9 from '../../images/Houses/image8.jpeg'
+import image10 from '../../images/Houses/image9.jpeg'
+import image11 from '../../images/Houses/image10.jpeg'
+import image12 from '../../images/Houses/image11.jpeg'
 const Contact = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -34,26 +43,114 @@ const Contact = () => {
                     <div className='row'>
                         <div className='carousel'>
 
-                            <Carousel style={{ borderRadius: '20px' }}  >
-                                <Carousel.Item interval={10000}>
+                            <Carousel style={{ borderRadius: '20px',height:'70vh',width:'100%' }}  >
+                                <Carousel.Item interval={10000}> 
                                     <img className="shadow-lg p-3 mb-5 bg-white rounded"
                                         className="d-block w-100"
                                         src={image1}
-                                        alt="Image One"
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>1</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image2}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>2</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image3}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>3</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image4}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>4</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image5}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>5</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image6}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
                                     />
                                     <Carousel.Caption>
                                         <h3>Coming Soon</h3>
                                         <p></p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
-                                <Carousel.Item interval={10000} >
-                                    <img className="shadow-lg p-3 mb-5 bg-grey rounded"
-                                        className="d-block w-100 h-100"
-                                        src={image1}
-                                        alt="Image Two"
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image7}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
                                     />
                                     <Carousel.Caption>
-                                        <h3>Coming Soon</h3>
+                                        <h3>6</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image8}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>7</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000}>
+                                    <img className="shadow-lg p-3 mb-5 bg-white rounded"
+                                        className="d-block w-100"
+                                        src={image9}
+                                        alt="Image One" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>8</h3>
+                                        <p></p>
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item interval={10000} >
+                                    <img className="shadow-lg p-3 mb-5 bg-grey rounded"
+                                        className="d-block w-100"
+                                        src={image10}
+                                        alt="Image Two" style={{ borderRadius: '20px',height:'70vh',width:'100%' }}
+                                    />
+                                    <Carousel.Caption>
+                                        <h3>9</h3>
                                         <p></p>
                                     </Carousel.Caption>
                                 </Carousel.Item>

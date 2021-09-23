@@ -106,7 +106,7 @@ const Navigbar = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav>
           <NavbarBrand />
-          <Mobilebtn><CgMenuLeft style={{marginLeft:'120px',fontSize:'40px',color:'white'}} onClick={showMobileModal} ismobileMenu={ismobileMenu} /></Mobilebtn>
+          <Mobilebtn><CgMenuLeft style={{marginLeft:'20px',fontSize:'40px', color:'white'}} onClick={showMobileModal} ismobileMenu={ismobileMenu} /></Mobilebtn>
           
           <NavItem>
             <NavLink>
