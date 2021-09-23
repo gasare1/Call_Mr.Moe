@@ -18,16 +18,16 @@ function App() {
         <ScrollToTop />
         <Navigbar />
         <Switch />
-        <Route path="/home" component={HomePage} exact >
+        <Route path="/" component={HomePage} exact >
           <HomePage />
         </Route>
-        <Route path="/homesearch" component={HomeSearch} exact >
+        <Route path="/" component={HomeSearch} exact >
           <HomeSearch />
         </Route>
-        <Route path="/contact" component={Contact} exact >
+        <Route path="/" component={Contact} exact >
           <Contact/>
         </Route>
-        <Route path="/about" component={About} exact >
+        <Route path="/" component={About} exact >
           <About />
         </Route>
         <Route path="/buyer" component={Buyer} exact >

@@ -121,7 +121,7 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link to="home" style={{ textDecoration: "none"}}>
+              <Link to="/" style={{ textDecoration: "none"}}>
                 <GiHouse style={{color:'white'}}/>
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
