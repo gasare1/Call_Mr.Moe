@@ -21,6 +21,7 @@ import image9 from '../../images/Houses/image8.jpeg'
 import image10 from '../../images/Houses/image9.jpeg'
 import image11 from '../../images/Houses/image10.jpeg'
 import image12 from '../../images/Houses/image11.jpeg'
+import phoenix from '../../images/phoenix-5452848_1920.jpg'
 const Contact = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -33,8 +34,8 @@ const Contact = () => {
     };
     return (
 
-        <div className="card text-center" id='contact' >
-            <div  style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize:'70px',fontFamily:'Montserrat, sans-serif' }}>
+        <div className="card text-center" id='contact' style ={{backgroundImage:`url(${phoenix})`}} >
+            <div  style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize:'70px',fontFamily:'Montserrat, sans-serif',marginTop:'40px' }}>
                 Home Of the Week
             </div>
             <div className='container' data-aos="fade-up"
@@ -156,15 +157,18 @@ const Contact = () => {
                                 </Carousel.Item>
                             </Carousel>
                         </div>
+                        
                     </div>
                 </div>
+                <div className="card-body">
+                <h5 className="card-title" style={{ color: 'white', justifyContent: 'center', alignItems: 'center', display: 'flex',fontFamily:'Gemunu Libre, sans-serif',fontSize:'40px',fontWeight:'bolder' }}>Priced at $500,000</h5>
+                <p className="card-text" style={{ color: 'white', justifyContent: 'center', alignItems: 'center', display: 'flex',fontFamily:'Gemunu Libre, sans-serif',fontSize:'20px' }}>This beauty just went on the Market-
+Lets go look at this MODEL QUALITY two story beauty loaded with UPGRADES! <br/> Located in San Tan Valleys Circle Cross Ranch, <br/>this home is located on a prime CORNER LOT with no neighbors directly behind. Wonderful DUAL MASTER floor plan with 4 Beds, 3.5 Baths, loft, and MEDIA ROOM.<br/> Home features granite countertops, walk in master spa shower, and tandem 3 car garage. <br/>Unwind under the twinkle of party lights amidst partnered with MISTERS and spacious patio! NO need to wait for a new build with this beauty ready to go! <br/>- Call Mr Moe - KW East Valley</p>
+
+            </div>
             </div>
 
-            <div className="card-body">
-                <h5 className="card-title" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>Nice Model Homes</h5>
-                <p className="card-text" style={{ color: 'black', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>If you are interested please contact us</p>
-
-            </div>
+           
 
         </div>
 
