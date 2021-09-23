@@ -9,7 +9,7 @@ import ScrollToTop from './Components/NavBar/Navbar/ScrollToTop';
 import HomeSearch from './Components/ContactUS/homeSearch';
 import React, { useState, useEffect } from 'react'
 import HomepageNav from './Components/HomePage/homepageNav';
-import Buyer from './Buyer/Buyer';
+import Buyer from './Components/Buyer/Buyer';
 import RoutesLinks from './Routes';
 function App() {
   return (
