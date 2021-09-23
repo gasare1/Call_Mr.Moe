@@ -10,7 +10,6 @@ import HomeSearch from './Components/ContactUS/homeSearch';
 import React, { useState, useEffect } from 'react'
 import HomepageNav from './Components/HomePage/homepageNav';
 import Buyer from './Components/Buyer/Buyer';
-import RoutesLinks from './Routes';
 function App() {
   return (
     <div className="d-flex flex-column h-100">
