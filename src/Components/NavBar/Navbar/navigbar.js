@@ -27,7 +27,8 @@ import { GiHouse, GiReceiveMoney } from "react-icons/gi";
 import { MdEmail } from "react-icons/md";
 import { CgMenuLeft } from "react-icons/cg";
 import { RiMenuFoldLine } from "react-icons/ri";
-import { Link } from "react-scroll";
+import { Link as Links } from "react-scroll";
+import { Link } from "react-router-dom";
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { SiTwitter } from "react-icons/si";
 import axios from "axios";
@@ -120,8 +121,8 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link to="home">
-                <GiHouse />
+              <Link to="home" style={{ textDecoration: "none"}}>
+                <GiHouse style={{color:'white'}}/>
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"
@@ -135,7 +136,7 @@ const Navigbar = () => {
           <NavItem>
             <NavLink onClick={showContactModal} isContactOpen={isContactOpen}>
               {" "}
-              <MdEmail />{" "}
+              <MdEmail  style={{color:'white'}}/>{" "}
               <a
                 style={{ textDecoration: "none", color: "gray" }}
                 target="_blank"
@@ -148,8 +149,8 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link to="contact">
-                <BsFillQuestionCircleFill />
+              <Link style={{ textDecoration: "none" }} to="contact">
+                <BsFillQuestionCircleFill style={{color:'white'}} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"
@@ -163,8 +164,8 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link to="homesearch">
-                <BsSearch />
+              <Link style={{ textDecoration: "none"}} to="homesearch">
+                <BsSearch style={{color:'white'}} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"
@@ -177,7 +178,7 @@ const Navigbar = () => {
           </NavItem>
           <NavItem>
             <NavLink>
-              <GiReceiveMoney />
+              <GiReceiveMoney  style={{color:'white'}}/>
               <a
                 style={{ textDecoration: "none", color: "gray" }}
                 target="_blank"
@@ -190,7 +191,7 @@ const Navigbar = () => {
           </NavItem>
           <NavItem>
             <NavLink onClick={showModal} isLoginOpen={isLoginOpen}>
-              <BiLogInCircle />
+              <BiLogInCircle  style={{color:'white'}}/>
               <a
                 style={{ textDecoration: "none", color: "gray" }}
                 target="_blank"
@@ -203,8 +204,8 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link to="/buyer">
-                <GiHouse />
+              <Link style={{textDecoration: "none",color:'white'}}  to="/buyer">
+                <GiHouse style={{textDecoration: "none",color:'white'}} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
                   target="_blank"

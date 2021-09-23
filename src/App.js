@@ -10,19 +10,30 @@ import HomeSearch from './Components/ContactUS/homeSearch';
 import React, { useState, useEffect } from 'react'
 import HomepageNav from './Components/HomePage/homepageNav';
 import Buyer from './Components/Buyer/Buyer';
+
 function App() {
   return (
     <div className="d-flex flex-column h-100">
       <Router>
         <ScrollToTop />
-        
-        <Switch />
         <Navigbar />
-        <Route path="/" component={HomePage} exact />
-        <Route path="/" component={HomeSearch} exact/> 
-        <Route path="/" component={Contact} exact />
-        <Route path="about" component={About} exact/> 
-        <Route path="/buyer" component={Buyer} exact/> 
+        <Switch />
+        <Route path="/home" component={HomePage} exact >
+          <HomePage />
+        </Route>
+        <Route path="/homesearch" component={HomeSearch} exact >
+          <HomeSearch />
+        </Route>
+        <Route path="/contact" component={Contact} exact >
+          <Contact/>
+        </Route>
+        <Route path="/about" component={About} exact >
+          <About />
+        </Route>
+        <Route path="/buyer" component={Buyer} exact >
+          <Buyer/>
+        </Route>
+        
         <Switch />
 
         <Footer />
