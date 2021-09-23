@@ -112,7 +112,7 @@ const Navigbar = () => {
           <NavbarBrand />
           <Mobilebtn>
             <CgMenuLeft
-              style={{ marginLeft: "20px", fontSize: "40px", color: "white" }}
+              style={{ marginLeft: "20px", fontSize: "40px", color: "grey" }}
               onClick={showMobileModal}
               ismobileMenu={ismobileMenu}
             />
@@ -204,7 +204,7 @@ const Navigbar = () => {
           <NavItem>
             <NavLink>
               {" "}
-              <Link style={{textDecoration: "none",color:'white'}}  to="/buyer">
+              <Link style={{textDecoration: "none",color:'white'}}  to="buyer">
                 <GiHouse style={{textDecoration: "none",color:'white'}} />
                 <a
                   style={{ textDecoration: "none", color: "gray" }}
@@ -254,8 +254,8 @@ const Navigbar = () => {
                 <NavItem>
                   <NavLink style={{ display: "flex" }}>
                     {" "}
-                    <Link to="home">
-                      <GiHouse />
+                    <Link style={{ textDecoration: "none"}} to="/">
+                      <GiHouse style={{color:'black'}}/>
                       <a
                         style={{ textDecoration: "none", color: "gray" }}
                         target="_blank"
@@ -286,7 +286,7 @@ const Navigbar = () => {
                 <NavItem>
                   <NavLink style={{ display: "flex" }}>
                     {" "}
-                    <Link to="contact">
+                    <Links to="contact">
                       <BsFillQuestionCircleFill />
                       <a
                         style={{ textDecoration: "none", color: "gray" }}
@@ -295,14 +295,14 @@ const Navigbar = () => {
                         {" "}
                         About{" "}
                       </a>
-                    </Link>
+                    </Links>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink style={{ display: "flex" }}>
                     {" "}
                     <Link to="homesearch">
-                      <BsSearch />
+                      <BsSearch style={{color:'black'}} />
                       <a
                         style={{ textDecoration: "none", color: "gray" }}
                         target="_blank"
@@ -340,6 +340,22 @@ const Navigbar = () => {
                       {" "}
                       Sign Up
                     </a>
+                  </NavLink>
+
+                </NavItem>
+                <NavItem>
+                  <NavLink style={{ display: "flex" }}>
+                    {" "}
+                    <Link to="buyer" style={{ textDecoration: "none"}}>
+                      <GiHouse style={{color:'black'}}/>
+                      <a
+                        style={{ textDecoration: "none", color: "gray" }}
+                        target="_blank"
+                      >
+                        {" "}
+                        Buyer
+                      </a>
+                    </Link>
                   </NavLink>
                 </NavItem>
                 <NavItem>
