@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id="about"
-      style={{ justifyContent: "space-between" }}
+      style={{ justifyContent: "space-between",justifyContent:'center',alignContent:'center',display:'flex'  }}
       data-aos="fade-up"
       data-aos-duration="3000"
     >
