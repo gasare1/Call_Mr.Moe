@@ -26,7 +26,7 @@ import { BiLogInCircle } from "react-icons/bi";
 import { GiHouse, GiReceiveMoney } from "react-icons/gi";
 import { MdEmail } from "react-icons/md";
 import { CgMenuLeft } from "react-icons/cg";
-import { RiMenuFoldLine } from "react-icons/ri";
+import { RiMenuFoldLine,RiLoginCircleLine } from "react-icons/ri";
 import { Link as Links } from "react-scroll";
 import { Link } from "react-router-dom";
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
@@ -212,6 +212,21 @@ const Navigbar = () => {
                 >
                   {" "}
                   Buyer
+                </a>
+              </Link>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink>
+              {" "}
+              <Link style={{textDecoration: "none",color:'white'}}  to="admin">
+                <RiLoginCircleLine style={{textDecoration: "none",color:'white'}} />
+                <a
+                  style={{ textDecoration: "none", color: "gray" }}
+                  target="_blank"
+                >
+                  {" "}
+                  Admin Login
                 </a>
               </Link>
             </NavLink>
