@@ -14,6 +14,7 @@ import Admin from "./Components/Admin/Admin";
 import AdminConsole from "./Components/Admin/AdminConsole";
 
 function App() {
+  const [authorized, setAuth] = useState(true)
   return (
     <div className="d-flex flex-column h-100">
       <Router>
@@ -34,7 +35,7 @@ function App() {
         </Route>
         <Route path="/buyer" component={Buyer} exact></Route>
         <Route path="/admin" component={Admin} exact></Route>
-        <Route path="/console" component={ () => <AdminConsole authorized = {false}/>} exact/>
+        <Route path="/console" component={ () => <AdminConsole authorized = {authorized}/>} exact/>
 
         <Switch />
 
