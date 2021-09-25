@@ -2,10 +2,7 @@ import React, { Component, useState } from "react";
 import axios from "axios";
 import { Form, Button, Modal, Row, Col } from "react-bootstrap";
 import { Link, Redirect, useHistory } from "react-router-dom";
-import { Authorized } from "../../Helper/Context";
-import { useContext } from "react";
-import AdminConsole from "./AdminConsole";
-import { Route } from "react-router";
+
 export default function Admin({authorized}) {
     
 
