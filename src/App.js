@@ -31,7 +31,7 @@ function App() {
           <About />
         </Route>
         <Route path="/buyer" component={Buyer} exact >
-          <Buyer/>
+          
         </Route>
         
         <Switch />
