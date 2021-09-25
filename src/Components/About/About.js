@@ -31,7 +31,7 @@ const About = () => {
           style={{ justifyContent: "space-between", margin: "20px" }}
         >
           <iframe
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcallmrmoe%2Fposts%2F112825067813761&show_text=true&width=500"
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcallmrmoe%2Fposts%2F113128477783420&show_text=true&width=500"
             width="500"
             height="813"
             style={{ border: "none", overflow: "hidden" }}
