@@ -44,7 +44,7 @@ const Contact = () => {
                     <div className='row'>
                         <div className='carousel'>
 
-                            <Carousel style={{ borderRadius: '20px',height:'70vh',width:'100%' }}  >
+                            <Carousel style={{height:'70vh',width:'100%' }}  >
                                 <Carousel.Item interval={10000}> 
                                     <img className="shadow-lg p-3 mb-5 bg-white rounded"
                                         className="d-block w-100"
